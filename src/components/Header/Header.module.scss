@@ -1,0 +1,103 @@
+// Desktop Header Styles
+.HeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+
+  background: rgb(31, 31, 31); 
+   box-shadow: 2px 4px  #b2e9fa;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.HeaderLogo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.HeaderNavList {
+  display: flex;
+  gap: 2rem;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+      color: #00d8ff;
+    }
+  }
+}
+
+// Mobile Header Styles
+.MobileHeader {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  background: #2F3237;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.MobileTopBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.MobileLogo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.HamburgerButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.MobileNav {
+  transition: all 5s ease-in;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  background: rgb(31, 31, 31);
+  display: flex;
+  min-height: 100vh;
+  padding: 1rem;
+
+  .CloseIcon{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  .MobileNavItems{
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  }
+
+  a {
+    padding: 0 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      color: #00d8ff;
+    }
+  }
+}
