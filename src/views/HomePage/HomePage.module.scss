@@ -1,0 +1,72 @@
+/* Styles for HomePage */
+.HomePageContainer{
+  background-color: rgb(48, 47, 47);
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  p{
+    width: 80%;
+    text-align: center;
+  }
+
+
+.HomePageName {
+  background: linear-gradient(
+    45deg,
+    rgba(142, 197, 252, 1) 0%,
+    rgba(141, 211, 255, 1) 25%,
+    rgba(161, 216, 255, 1) 50%,
+    rgba(193, 210, 255, 1) 75%,
+    rgba(224, 195, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.Button{
+  padding: .5rem 1rem;
+  border: none;
+  box-shadow: 4px 6px;
+  border-radius: .25rem;
+  font-weight: 600;
+  font-size: 1em;
+
+  .DownloadLink{
+    text-decoration: none;
+    color: black;
+  }
+  
+  &:hover{
+    background-color: #a0d9fc;
+    transform: scale(1.11);
+    position: relative;
+
+    &::after{
+      content: "";
+      border-bottom: .25rem solid #a0d9fc;
+      border-right: .25rem solid #a0d9fc;
+      padding: .5rem;
+      position:absolute;
+      bottom: 0;
+      transform: translate(40%,70%);
+    }
+
+     &::before{
+      content: "";
+      border-left: .25rem solid #a0d9fc;
+      border-top: .25rem solid #a0d9fc;
+      padding: .5rem;
+      position:absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-50%,-50%);
+    }
+  }
+
+
+}
+}
