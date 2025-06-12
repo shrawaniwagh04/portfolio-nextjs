@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Footer = ({}: FooterProps) => { 
   return (
-      <div className={styles.footerContainer}> 
+    <div className={styles.footerContainer}> 
       {FooterData.map((item, index) => (
         <Link href={item.link} key={index}>
           <Image  src={item.icon} alt="Image" width={30} height={30} />

@@ -5,40 +5,31 @@
   align-items: center;
   padding: 1rem 2rem;
 
-  background: rgb(31, 31, 31); 
-   box-shadow: 2px 4px  #b2e9fa;
+  background: rgb(31, 31, 31);
+  box-shadow: 2px 4px #b2e9fa;
   color: white;
   position: sticky;
   top: 0;
   z-index: 100;
-}
 
-.HeaderLogo {
-  font-size: 2em;
-  font-weight: bolder;
-    background: linear-gradient(
-    45deg,
-    rgba(142, 197, 252, 1) 0%,
-    rgba(141, 211, 255, 1) 25%,
-    rgba(161, 216, 255, 1) 50%,
-    rgba(193, 210, 255, 1) 75%,
-    rgba(224, 195, 255, 1) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.HeaderNavList {
-  display: flex;
-  gap: 2rem;
-
-  a {
+  .HeaderLogo {
+    font-size: 1.8rem;
+    font-weight: bold;
     color: #fff;
-    text-decoration: none;
-    font-weight: 600;
+  }
 
-    &:hover {
-      color: #00d8ff;
+  .HeaderNavList {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+
+      &:hover {
+        color: #00d8ff;
+      }
     }
   }
 }
@@ -49,64 +40,64 @@
   display: flex;
   flex-direction: column;
   padding: 1rem 1.5rem;
-  background: #2F3237;
+  background: #2f3237;
   color: white;
   position: sticky;
   top: 0;
   z-index: 100;
-}
 
-.MobileTopBar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  .MobileTopBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-.MobileLogo {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #fff;
-}
+    .MobileLogo {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #fff;
+    }
 
-.HamburgerButton {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
+    .HamburgerButton {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+  }
 
-.MobileNav {
-  transition: all 5s ease-in;
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  background: rgb(31, 31, 31);
-  display: flex;
-  min-height: 100vh;
-  padding: 1rem;
-
-  .CloseIcon{
+  .MobileNav {
+    transition: all 5s ease-in;
     position: absolute;
-    right: 1rem;
-    top: 1rem;
-  }
+    top: 0;
+    right: 0;
 
-  .MobileNavItems{
-  padding: 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  }
+    background: rgb(31, 31, 31);
+    display: flex;
+    min-height: 100vh;
+    padding: 1rem;
 
-  a {
-    padding: 0 1rem;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
+    .CloseIcon {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+    }
 
-    &:hover {
-      color: #00d8ff;
+    .MobileNavItems {
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    a {
+      padding: 0 1rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover {
+        color: #00d8ff;
+      }
     }
   }
 }
