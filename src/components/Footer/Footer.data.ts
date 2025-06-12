@@ -1,7 +1,7 @@
-import LinkedIn from '../../assests/linkedin.png';
-import Leetcode from '../../assests/code.png';
-import GitHub from '../../assests/gitlab.png';
-import Twitter from '../../assests/twitter.png';
+import LinkedIn from '@assests/linkedin.png';
+import Leetcode from '@assests/code.png';
+import GitHub from '@assests/gitlab.png';
+import Twitter from '@assests/twitter.png';
 
 export const FooterData = [
   { icon: LinkedIn, link: "/google.com" },

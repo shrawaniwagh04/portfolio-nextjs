@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./Card.module.scss";
 import type { CardProps } from "./Card.types.ts";
 import { useState } from "react";
-import GitHub from "../../assests/gitlab.png";
+import GitHub from "@assests/gitlab.png";
 import Link from "next/link";
 
 const Card = ({ data }: CardProps) => {

@@ -3,8 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./Header.module.scss";
 import useWindowWidth from "@/hooks/useWindowWidth";
-import hamburger from "../../assests/hamburger.png";
-import close from "../../assests/cross.png";
+import hamburger from "@assests/hamburger.png";
+import cross from '@assests/cross.png';
 
 import { HeaderProps, MobileHeaderProps } from "./IHeader";
 import { NavItems } from "./Header.data";
@@ -23,7 +23,7 @@ const MobileHeader = ({ isMenuOpen, toggleMenu }: MobileHeaderProps) => {
 
       {isMenuOpen && (
         <nav className={styles.MobileNav}>
-          <Image src={close} alt="Close" width={24} height={24} className={styles.CloseIcon} onClick={toggleMenu}/>
+          <Image src={cross} alt="Close" width={24} height={24} className={styles.CloseIcon} onClick={toggleMenu}/>
           <div className={styles.MobileNavItems}>
             {NavItems.map((item) => (
               <Link href={item.link}>{item.name}</Link>

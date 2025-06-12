@@ -1,4 +1,4 @@
-import Card from "../../assests/tms.jpg"
+import Card from "@assests/tms.jpg";
 
 export const Project = [
 {title: "Product Management System", description : "A role-based product management platform with real-time API integration and responsive UI for manufacturers, distributors, and customers.",image: Card ,link : "https://google.com"},
