@@ -12,15 +12,12 @@
     padding: 0 6rem;
   }
 
-
-}
-
-
-  .ProjectsSubContainerMobileView{
-      display: grid;
+  .ProjectsSubContainerMobileView {
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
     justify-content: center;
     align-items: center;
     padding: 0 6rem;
   }
+}
