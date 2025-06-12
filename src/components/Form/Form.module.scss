@@ -1,14 +1,11 @@
-.form {
+.FormContainer {
   display: grid;
   grid-template-columns: 1fr;
-  gap: .5rem;
+  gap: 0.5rem;
   padding-bottom: 2rem;
   width: 50vw;
 
-  
-  // padding: 1rem;
-
-  .btn {
+  .FormSubmitBtn {
     justify-self: start;
     background-color: #b2e9fa;
     border: none;
@@ -25,7 +22,7 @@
   }
 }
 
-.inputContainer {
+.InputContainer {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
@@ -36,7 +33,7 @@
     color: #e0e0e0;
   }
 
-  .input,
+  .FormInput,
   textarea {
     padding: 0.6rem 1rem;
     border-radius: 0.5rem;
@@ -55,5 +52,5 @@
 
 .error {
   color: #ff6b6b;
-  font-size: .75em;
+  font-size: 0.75em;
 }

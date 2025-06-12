@@ -7,7 +7,7 @@ const Form = ({ data, onSubmit, isError }: FormProps) => {
   const {
     register,
     handleSubmit,
-    reset, 
+    reset,
     formState: { errors },
   } = useForm<Record<string, string>>();
 
@@ -15,16 +15,16 @@ const Form = ({ data, onSubmit, isError }: FormProps) => {
     formData
   ) => {
     onSubmit(formData);
-    reset(); 
+    reset();
   };
 
   return (
     <form
       onSubmit={handleSubmit(handleFormSubmit)}
-      className={`${styles.form} ${styles.flex}`}
+      className={styles.FormContainer}
     >
       {data.map((field) => (
-        <div className={styles.inputContainer} key={field.name}>
+        <div className={styles.InputContainer} key={field.name}>
           <label htmlFor={field.name}>{field.label}</label>
           {field.type === "textarea" ? (
             <textarea
@@ -33,7 +33,7 @@ const Form = ({ data, onSubmit, isError }: FormProps) => {
               {...register(field.name, {
                 required: `${field.label} is required`,
               })}
-              className={styles.input}
+              className={styles.FormInput}
             ></textarea>
           ) : (
             <input
@@ -43,7 +43,7 @@ const Form = ({ data, onSubmit, isError }: FormProps) => {
               {...register(field.name, {
                 required: `* ${field.label} is required`,
               })}
-              className={styles.input}
+              className={styles.FormInput}
             />
           )}
           {errors[field.name] && (
@@ -54,7 +54,7 @@ const Form = ({ data, onSubmit, isError }: FormProps) => {
 
       {isError && <span className={styles.error}>* Invalid Credentials</span>}
 
-      <button className={`${styles.button} ${styles.btn}`} type="submit">
+      <button className={styles.FormSubmitBtn} type="submit">
         Submit
       </button>
     </form>
