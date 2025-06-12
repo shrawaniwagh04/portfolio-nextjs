@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import styles from "./HomePage.module.scss";
 import { NAME } from "@/constants/constants";
+import { usePathname } from "next/navigation";
 
 const HomePage = () => {
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [index, setIndex] = useState(0);
+  const path = usePathname();
 
   function TypeWriter() {
     const timeout = setTimeout(() => {

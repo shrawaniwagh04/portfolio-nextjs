@@ -1,1 +1,26 @@
-/* Styles for Projects */ 
+/* Styles for Projects */
+.ProjectContainer {
+  background-color: rgb(51, 51, 51);
+  color: white;
+  padding: 1rem;
+
+  .ProjectsSubContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 0 6rem;
+  }
+
+
+}
+
+
+  .ProjectsSubContainerMobileView{
+      display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6rem;
+  }

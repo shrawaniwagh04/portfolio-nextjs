@@ -8,6 +8,7 @@ import close from "../../assests/cross.png";
 
 import { HeaderProps, MobileHeaderProps } from "./IHeader";
 import { NavItems } from "./Header.data";
+import { usePathname } from "next/navigation";
 
 //Mobile Nav Header
 const MobileHeader = ({ isMenuOpen, toggleMenu }: MobileHeaderProps) => {
@@ -36,6 +37,7 @@ const MobileHeader = ({ isMenuOpen, toggleMenu }: MobileHeaderProps) => {
 
 //Desktop Nav Header
 const Header = ({ data }: HeaderProps) => {
+  const path = usePathname();
   const { isMobileView, isTabletView } = useWindowWidth();
   const isResponsive = isMobileView || isTabletView;
 
@@ -50,7 +52,7 @@ const Header = ({ data }: HeaderProps) => {
       <div className={styles.HeaderLogo}>Shrawani Wagh</div>
       <nav className={styles.HeaderNavList}>
         {NavItems.map((item) => (
-          <Link href={item.link}>{item.name}</Link>
+          <Link href={item.link} className={path === item.link ? styles.LinkColorBlue:styles.LinkColorWhite }>{item.name}</Link>
         ))}
       </nav>
     </header>
