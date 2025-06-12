@@ -8,18 +8,11 @@ import close from "../../assests/cross.png";
 
 import { HeaderProps, MobileHeaderProps } from "./IHeader";
 import { NavItems } from "./Header.data";
-import { Poppins } from 'next/font/google';
-
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'], 
-  display: 'swap',
-});
 
 //Mobile Nav Header
 const MobileHeader = ({ isMenuOpen, toggleMenu }: MobileHeaderProps) => {
   return (
-    <header className={`${styles.MobileHeader} ${poppins.className}`}>
+    <header className={styles.MobileHeader} >
       <div className={styles.MobileTopBar}>
         <div className={styles.MobileLogo}>Shrawani Wagh</div>
         <button onClick={toggleMenu} className={styles.HamburgerButton}>
@@ -53,7 +46,7 @@ const Header = ({ data }: HeaderProps) => {
   };
 
   return !isResponsive ? (
-    <header className={`${styles.HeaderContainer}  ${poppins.className}`}>
+    <header className={styles.HeaderContainer}>
       <div className={styles.HeaderLogo}>Shrawani Wagh</div>
       <nav className={styles.HeaderNavList}>
         {NavItems.map((item) => (
