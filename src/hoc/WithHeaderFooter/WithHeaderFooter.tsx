@@ -1,8 +1,11 @@
+'use client'
 import styles from './WithHeaderFooter.module.scss';
 import type { WithHeaderFooterProps } from "./IWithHeaderFooter";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import dynamic from 'next/dynamic';
 import { Poppins } from 'next/font/google';
+
+const Header  = dynamic(() => import ("@/components/Header/Header"));
+const Footer = dynamic(() => import ("@/components/Footer/Footer"));
 
 
 const poppins = Poppins({
