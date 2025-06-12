@@ -2,9 +2,7 @@ import { useEffect, useState } from "react";
 import { AboutData, skillsData, SubNavList } from "./About.data";
 import styles from "./About.module.scss";
 import type { AboutProps } from "./About.types";
-import { usePathname } from "next/navigation";
 import useWindowWidth from "@/hooks/useWindowWidth";
-import { isWeakMap } from "util/types";
 
 const About = ({}: AboutProps) => {
   const [currentNav, setCurrentNav] = useState(SubNavList[0]?.id || 0);
@@ -13,7 +11,9 @@ const About = ({}: AboutProps) => {
 
   useEffect(() => {
     const selectedData = SubNavList.find((item) => item.id === currentNav);
-    setData(selectedData);
+    if (selectedData) {
+      setData(selectedData);
+    }
   }, [currentNav]);
 
   return (
@@ -48,6 +48,7 @@ const About = ({}: AboutProps) => {
           ))}
         </ul>
 
+        {/* skills inside work experience */}
         <div className={styles.AboutSkillSection}>
           <h4>Skills</h4>
           <div
@@ -60,6 +61,7 @@ const About = ({}: AboutProps) => {
         </div>
       </div>
 
+      {/* Skills section */}
       <h2>Skills</h2>
       <div className={isMobileView ? styles.AboutTagsMobile : styles.AboutTags}>
         {skillsData.map((item) => (
