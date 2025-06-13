@@ -1,0 +1,56 @@
+.FormContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  padding-bottom: 2rem;
+  width: 50vw;
+
+  .FormSubmitBtn {
+    justify-self: start;
+    background-color: #b2e9fa;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #91d3f5;
+    }
+  }
+}
+
+.InputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: left;
+
+  label {
+    font-weight: 500;
+    color: #e0e0e0;
+  }
+
+  .FormInput,
+  textarea {
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #555;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    font-size: 1rem;
+
+    &:focus {
+      border-color: #b2e9fa;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(178, 233, 250, 0.3);
+    }
+  }
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: 0.75em;
+}
