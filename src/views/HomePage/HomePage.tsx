@@ -39,10 +39,7 @@ const HomePage = () => {
         </span>
       </h1>
       <p>
-        Welcome to my portfolio! Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Quidem eveniet reprehenderit totam incidunt corporis
-        eius assumenda numquam eaque fuga. Provident, ratione blanditiis dolorum
-        quae dolore eum repudiandae ab recusandae nulla!
+        I’m a final-year Computer Engineering student at Bajaj Institute of Technology (2021–2025) with hands-on experience in React, React Native, JavaScript, and Firebase. I've interned at Coditas and Indigies Innovation, building scalable web and mobile apps, and collaborating on real-world projects using tools like Git, Redux, and Azure DevOps. As a community contributor and student leader, I’ve developed event platforms, led design teams, and earned recognition in national-level competitions for innovation and impact.
       </p>
       <button className={styles.Button}>
         <a href="/resume.pdf" className={styles.DownloadLink} download>
