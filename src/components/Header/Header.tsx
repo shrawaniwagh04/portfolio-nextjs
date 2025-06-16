@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "./Header.module.scss";
 import useWindowWidth from "@/hooks/useWindowWidth";
 import hamburger from "@assests/hamburger.png";
-import cross from '@assests/cross.png';
+import cross from "@assests/cross.png";
 
 import { HeaderProps, MobileHeaderProps } from "./IHeader";
 import { NavItems } from "./Header.data";
@@ -13,9 +13,9 @@ import { usePathname } from "next/navigation";
 //Mobile Nav Header
 const MobileHeader = ({ isMenuOpen, toggleMenu }: MobileHeaderProps) => {
   return (
-    <header className={styles.MobileHeader} >
+    <header className={styles.MobileHeader}>
       <div className={styles.MobileTopBar}>
-        <div className={styles.MobileLogo}>Shrawani Wagh</div>
+        <h3 className={styles.Portfolio}>Portfolio</h3>
         <button onClick={toggleMenu} className={styles.HamburgerButton}>
           <Image src={hamburger} alt="Menu" width={24} height={24} />
         </button>
@@ -23,7 +23,14 @@ const MobileHeader = ({ isMenuOpen, toggleMenu }: MobileHeaderProps) => {
 
       {isMenuOpen && (
         <nav className={styles.MobileNav}>
-          <Image src={cross} alt="Close" width={24} height={24} className={styles.CloseIcon} onClick={toggleMenu}/>
+          <Image
+            src={cross}
+            alt="Close"
+            width={24}
+            height={24}
+            className={styles.CloseIcon}
+            onClick={toggleMenu}
+          />
           <div className={styles.MobileNavItems}>
             {NavItems.map((item) => (
               <Link href={item.link}>{item.name}</Link>
@@ -49,10 +56,17 @@ const Header = ({ data }: HeaderProps) => {
 
   return !isResponsive ? (
     <header className={styles.HeaderContainer}>
-      <div className={styles.HeaderLogo}>Shrawani Wagh</div>
+      <h1 className={styles.Portfolio}>Portfolio</h1>
       <nav className={styles.HeaderNavList}>
         {NavItems.map((item) => (
-          <Link href={item.link} className={path === item.link ? styles.LinkColorBlue:styles.LinkColorWhite }>{item.name}</Link>
+          <Link
+            href={item.link}
+            className={
+              path === item.link ? styles.LinkColorBlue : styles.LinkColorWhite
+            }
+          >
+            {item.name}
+          </Link>
         ))}
       </nav>
     </header>

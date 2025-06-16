@@ -5,10 +5,12 @@ import emailjs from "@emailjs/browser";
 import { contactFields } from "./Contact.data";
 import { toast } from "react-toastify";
 import dynamic from "next/dynamic";
+import useWindowWidth from "@/hooks/useWindowWidth";
 
 const Form = dynamic(() => import("@/components/Form/Form"));
 
 export default function Contact() {
+  const {isMobileView} = useWindowWidth();
   const handleFormSubmit = (formData: Record<string, string>) => {
     const templateParams = {
       name: formData.name,
@@ -37,7 +39,7 @@ export default function Contact() {
 
   return (
     <div className={styles.ContactContainer}>
-      <div className={styles.ContactContent}>
+      <div className={isMobileView ? styles.ContactContentMobile:styles.ContactContent}>
         <h2>Contact Me</h2>
         <Form data={contactFields} onSubmit={handleFormSubmit} />
       </div>

@@ -4,8 +4,8 @@ import GitHub from '@assests/gitlab.png';
 import Twitter from '@assests/twitter.png';
 
 export const FooterData = [
-  { icon: LinkedIn, link: "/google.com" },
-  { icon: GitHub, link: "/google.com" },
-  { icon: Leetcode, link: "/google.com" },
-  { icon: Twitter, link: "/google.com" },
+  { icon: LinkedIn, link: "https://www.linkedin.com/in/shrawaniwagh" },
+  { icon: GitHub, link: "https://github.com/shrawaniwagh2003" },
+  { icon: Leetcode, link: "https://x.com/" },
+  { icon: Twitter, link: "https://leetcode.com/" },
 ];
